@@ -14,224 +14,37 @@ import Card from '../components/Card.astro';
   />
   
   <section class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-4xl mx-auto">
       
-      <!-- MITRE Corporation -->
-      <div class="mb-16">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700 mb-8">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">MITRE Corporation</h2>
-              <p class="text-xl text-primary-600 dark:text-primary-400 mb-2">Software Engineer Intern</p>
-              <p class="text-gray-600 dark:text-gray-300">McLean, VA | 05/2024 - Present</p>
-            </div>
-            <div class="mt-4 md:mt-0">
-              <span class="inline-flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-200 rounded-full text-sm font-medium">
-                Active
-              </span>
-            </div>
-          </div>
-          
-          <div class="prose dark:prose-invert max-w-none mb-8">
-            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Working on EGADS for the past 15 months including the school year, and balanced three projects over the summer.
-              Created two full-stack web applications, delivered one to the Sponsor and integrated LLM parsing into the other.
-              Contributed to an internal technical report using economic cost analysis for attritable aircraft acquisition.
-            </p>
-          </div>
-          
-          <!-- Key Achievements -->
-          <div class="mb-8">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Key Achievements</h3>
-            <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Developed in Python, C, C++, Bash, Makefiles, HTML/CSS, JavaScript, Svelte, and Rust
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Used concepts including concurrency, memory management, visualization, UI/UX, DevOps
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Won a machine learning hackathon, integrated Generative AI into workflow
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                Analyzed project requirements and used full stack skills (operating system, databases, web servers, and frontend)
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div class="grid grid-cols-1 gap-8">
         
-        <!-- MITRE Projects -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-          <Card 
-            title="Project 1" 
-            description="Refactored a signal processing algorithm, developed visuals, and integrated new capabilities. Refactored a multithreaded data sampling C program involving Makefile/bash build scripts and systemd processes. Transformed and visualized GPS anomaly data using GIS, database APIs, JSON, Python, and web development."
-            tags={["C", "Python", "GIS", "Visualization", "GPS"]}
-            className="border-l-4 border-l-blue-500"
-          />
-          
-          <Card 
-            title="Project 2" 
-            description="Helped create a web app using LLMs to process PDFs into standardized JSON. Working on a data transformation system in Rust with visualization through Svelte Kit."
-            tags={["LLM", "Rust", "Svelte", "JSON", "PDF Processing"]}
-            className="border-l-4 border-l-green-500"
-          />
-          
-          <Card 
-            title="Project 3" 
-            description="Implemented a cost model in Python with an HTML/CSS UI and automated input parsing, running, and visualization."
-            tags={["Python", "HTML/CSS", "Cost Analysis", "Automation"]}
-            className="border-l-4 border-l-purple-500"
-          />
-        </div>
-      </div>
-      
-      <!-- CodAKid -->
-      <div class="mb-16">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">CodAKid</h2>
-              <p class="text-lg text-primary-600 dark:text-primary-400 mb-2">Programming Instructor</p>
-              <p class="text-gray-600 dark:text-gray-300">Remote | 09/2023 - 05/2024</p>
-            </div>
-            <div class="mt-4 md:mt-0">
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">
-                Completed
-              </span>
-            </div>
-          </div>
-          
-          <div class="prose dark:prose-invert max-w-none mb-6">
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Taught the fundamentals of programming in Java, Python, and Scratch to new and mid-experience students.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Appian Corporation -->
-      <div class="mb-16">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Appian Corporation</h2>
-              <p class="text-lg text-primary-600 dark:text-primary-400 mb-2">Information Security Engineer Intern</p>
-              <p class="text-gray-600 dark:text-gray-300">McLean, VA | 06/2023 - 08/2023</p>
-            </div>
-            <div class="mt-4 md:mt-0">
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">
-                Completed
-              </span>
-            </div>
-          </div>
-          
-          <div class="prose dark:prose-invert max-w-none mb-6">
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Improved threat analysis by consolidating threat intelligence from HTMLS/RSS feeds on an Appian web app.
-              Provided engineering support on Bash scripts to security engineers and pushed changes to production.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Appian -->
-      <div class="mb-16">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-            <div>
-              <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Appian Corporation</h2>
-              <p class="text-lg text-primary-600 dark:text-primary-400 mb-2">Software Development Intern</p>
-              <p class="text-gray-600 dark:text-gray-300">Tysons Corner, VA | Summer 2023</p>
-            </div>
-            <div class="mt-4 md:mt-0">
-              <span class="inline-flex items-center px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">
-                Completed
-              </span>
-            </div>
-          </div>
-          
-          <div class="prose dark:prose-invert max-w-none mb-6">
-            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Worked on low-code platform development and enterprise application solutions. 
-              Collaborated with cross-functional teams to improve platform performance and user experience.
-            </p>
-          </div>
-          
-          <!-- Achievements -->
-          <ul class="space-y-2 text-gray-600 dark:text-gray-300">
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-purple-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Contributed to core platform features used by thousands of enterprise customers
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-purple-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Improved platform performance through optimization and refactoring
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-purple-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Participated in agile development process and code review cycles
-            </li>
-            <li class="flex items-start">
-              <svg class="w-5 h-5 text-purple-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              Worked with Java, JavaScript, and enterprise-scale database systems
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- Additional Experience -->
-      <div>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Additional Experience</h2>
+        <!-- MITRE Corporation -->
+        <Card 
+          title="MITRE Corporation - Software Engineer Intern"
+          description="Working on EGADS for 15 months including the school year, balanced three projects over the summer. Created two full-stack web applications, delivered one to the Sponsor and integrated LLM parsing into the other. Contributed to an internal technical report using economic cost analysis for attritable aircraft acquisition."
+          date="McLean, VA | 05/2024 - Present"
+          tags={["Python", "C", "C++", "Rust", "Svelte", "JavaScript", "HTML/CSS", "LLM", "Full Stack"]}
+          className="border-l-4 border-l-green-500"
+        />
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card 
-            title="Research Assistant"
-            description="Supporting various research initiatives at William & Mary, including economics research and computer science projects. Contributing to data collection, analysis, and publication efforts."
-            date="2023 - Present"
-            tags={["Research", "Data Analysis", "Academic Writing"]}
-          />
-          
-          <Card 
-            title="Freelance Developer"
-            description="Developing custom software solutions for small businesses and personal projects. Experience with web development, automation scripts, and database management."
-            date="2022 - Present"
-            tags={["Web Development", "Python", "JavaScript", "Databases"]}
-          />
-          
-          <Card 
-            title="Teaching Assistant"
-            description="Assisting professors with computer science courses, helping students understand complex concepts, grading assignments, and conducting study sessions."
-            date="2023 - 2024"
-            tags={["Education", "Computer Science", "Mentoring"]}
-          />
-          
-          <Card 
-            title="Open Source Contributor"
-            description="Contributing to various open-source projects, focusing on cybersecurity tools, educational resources, and developer productivity improvements."
-            date="2022 - Present"
-            tags={["Open Source", "GitHub", "Community"]}
-          />
-        </div>
+        <!-- CodAKid -->
+        <Card 
+          title="CodAKid - Programming Instructor"
+          description="Taught the fundamentals of programming in Java, Python, and Scratch to new and mid-experience students."
+          date="Remote | 09/2023 - 05/2024"
+          tags={["Java", "Python", "Scratch", "Education", "Teaching"]}
+          className="border-l-4 border-l-blue-500"
+        />
+        
+        <!-- Appian Corporation -->
+        <Card 
+          title="Appian Corporation - Information Security Engineer Intern"
+          description="Improved threat analysis by consolidating threat intelligence from HTMLS/RSS feeds on an Appian web app. Provided engineering support on Bash scripts to security engineers and pushed changes to production."
+          date="McLean, VA | 06/2023 - 08/2023"
+          tags={["Security", "Bash", "Web Applications", "Threat Intelligence"]}
+          className="border-l-4 border-l-purple-500"
+        />
+        
       </div>
       
     </div>
