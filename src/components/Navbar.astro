@@ -10,7 +10,6 @@ const navItems = [
   { name: 'Experience', href: '/experience' },
   { name: 'Research', href: '/research' },
   { name: 'Projects', href: '/projects' },
-  { name: 'Honors', href: '/honors' },
   { name: 'Contact', href: '/contact' },
 ];
 ---
@@ -59,70 +58,133 @@ const navItems = [
       <div class="md:hidden flex items-center">
         <button
           id="mobile-menu-button"
-          class="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-          aria-label="Toggle mobile menu"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <span class="sr-only">Open main menu</span>
+          <!-- Menu icon -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
     </div>
-    
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="md:hidden hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 dark:border-gray-700">
-        {navItems.map((item) => (
-          <a
-            href={item.href}
-            class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-              currentPath === item.href
-                ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
-                : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700'
-            }`}
-          >
-            {item.name}
-          </a>
-        ))}
-        <button
-          id="mobile-theme-toggle"
-          class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+            currentPath === item.href
+              ? 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20'
+              : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+          }`}
         >
-          Toggle Dark Mode
-        </button>
-      </div>
+          {item.name}
+        </a>
+      ))}
     </div>
   </div>
 </nav>
 
 <script>
-  // Mobile menu toggle
-  document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuButton?.addEventListener('click', () => {
-      mobileMenu?.classList.toggle('hidden');
-    });
-    
-    // Theme toggle functionality
+  // Dark mode toggle functionality
+  function initTheme() {
     const themeToggle = document.getElementById('theme-toggle');
-    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const htmlElement = document.documentElement;
     
-    function toggleTheme() {
-      const element = document.documentElement;
-      const isDark = element.classList.contains('dark');
+    // Check for saved theme preference or default to 'light'
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.classList.toggle('dark', savedTheme === 'dark');
+    
+    themeToggle?.addEventListener('click', () => {
+      const isDark = htmlElement.classList.contains('dark');
+      const newTheme = isDark ? 'light' : 'dark';
       
-      if (isDark) {
-        element.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      } else {
-        element.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    }
+      htmlElement.classList.toggle('dark', newTheme === 'dark');
+      localStorage.setItem('theme', newTheme);
+    });
+  }
+  
+  // Mobile menu toggle functionality
+  function initMobileMenu() {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const menuIcon = button?.querySelector('svg:first-child');
+    const closeIcon = button?.querySelector('svg:last-child');
     
-    themeToggle?.addEventListener('click', toggleTheme);
-    mobileThemeToggle?.addEventListener('click', toggleTheme);
+    button?.addEventListener('click', () => {
+      const isOpen = !menu?.classList.contains('hidden');
+      
+      menu?.classList.toggle('hidden', isOpen);
+      menuIcon?.classList.toggle('hidden', !isOpen);
+      closeIcon?.classList.toggle('hidden', isOpen);
+      button.setAttribute('aria-expanded', (!isOpen).toString());
+    });
+  }
+  
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
+    initMobileMenu();
+  });
+  
+  // Re-initialize on navigation (for SPA-like behavior)
+  document.addEventListener('astro:page-load', () => {
+    initTheme();
+    initMobileMenu();
   });
 </script>
+
+<style>
+  /* Ensure smooth transitions for theme changes */
+  html {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Custom primary color variables */
+  :root {
+    --color-primary-50: rgb(239 246 255);
+    --color-primary-100: rgb(219 234 254);
+    --color-primary-400: rgb(96 165 250);
+    --color-primary-500: rgb(59 130 246);
+    --color-primary-600: rgb(37 99 235);
+    --color-primary-900: rgb(30 58 138);
+  }
+  
+  .text-primary-400 {
+    color: var(--color-primary-400);
+  }
+  
+  .text-primary-600 {
+    color: var(--color-primary-600);
+  }
+  
+  .bg-primary-50 {
+    background-color: var(--color-primary-50);
+  }
+  
+  .dark .bg-primary-900\/20 {
+    background-color: rgb(30 58 138 / 0.2);
+  }
+  
+  .hover\:text-primary-400:hover {
+    color: var(--color-primary-400);
+  }
+  
+  .hover\:text-primary-600:hover {
+    color: var(--color-primary-600);
+  }
+  
+  .focus\:ring-primary-500:focus {
+    --tw-ring-color: var(--color-primary-500);
+  }
+</style>
