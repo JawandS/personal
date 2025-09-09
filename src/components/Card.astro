@@ -13,28 +13,28 @@ export interface Props {
 const { title, description, href, tags = [], date, className = "" } = Astro.props;
 ---
 
-<div class={`bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 ${className}`}>
+<div class={`bg-navy-900 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-navy-800 hover:border-accent-600 ${className}`}>
   <div class="p-6">
     {date && (
-      <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+      <div class="text-sm text-primary-400 mb-2">
         {date}
       </div>
     )}
     
     {href ? (
       <a href={href} class="group" target="_blank" rel="noopener noreferrer">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors mb-2">
+        <h3 class="text-xl font-semibold text-primary-100 group-hover:text-accent-400 transition-colors mb-2">
           {title}
         </h3>
       </a>
     ) : (
-      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+      <h3 class="text-xl font-semibold text-primary-100 mb-2">
         {title}
       </h3>
     )}
     
     {description && (
-      <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+      <p class="text-primary-300 mb-4 line-clamp-3">
         {description}
       </p>
     )}
@@ -44,7 +44,7 @@ const { title, description, href, tags = [], date, className = "" } = Astro.prop
     {tags.length > 0 && (
       <div class="flex flex-wrap gap-2 mt-4">
         {tags.map((tag) => (
-          <span class="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full">
+          <span class="px-3 py-1 text-xs font-medium bg-accent-900/30 text-accent-300 rounded-full border border-accent-800">
             {tag}
           </span>
         ))}

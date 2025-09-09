@@ -21,38 +21,16 @@ const { title, description = "Software engineer with a background in economics a
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+  <body class="min-h-screen bg-navy-950 text-primary-100">
     <slot />
     
     <!-- Footer Component -->
-    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto">
+    <footer class="bg-navy-900 border-t border-navy-800 mt-auto">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="text-center text-gray-600 dark:text-gray-400">
+        <div class="text-center text-primary-300">
           <p>&copy; 2025 Jawand Singh. All rights reserved.</p>
         </div>
       </div>
     </footer>
-    
-    <!-- Dark mode toggle script -->
-    <script>
-      // Check for saved theme preference or default to 'light' mode
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme');
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
-        }
-        return 'light';
-      })();
-      
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
-      
-      window.localStorage.setItem('theme', theme);
-    </script>
   </body>
 </html>
