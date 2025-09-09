@@ -1,0 +1,342 @@
+---
+// Projects Page
+// Personal and open-source projects showcase
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Projects - Jawand Singh" description="Personal projects, open-source contributions, and side projects">
+  <Hero 
+    title="Project Portfolio" 
+    subtitle="Personal projects, open-source contributions, and creative solutions"
+    gradient="from-teal-500 to-blue-600"
+  />
+  
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Featured Projects -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Featured Projects</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <!-- OmniChat -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">OmniChat</h3>
+              <a 
+                href="https://github.com/username/omnichat" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+              A comprehensive chat application with real-time messaging, file sharing, and AI-powered features. 
+              Built with modern web technologies and deployed on AWS with auto-scaling capabilities.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Real-time messaging with WebSocket integration
+              </div>
+              <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                AI-powered message suggestions and translation
+              </div>
+              <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                End-to-end encryption for secure communications
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">React</span>
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">Node.js</span>
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">WebSocket</span>
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">AWS</span>
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">PostgreSQL</span>
+            </div>
+          </div>
+          
+          <!-- MysticScribe -->
+          <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-8 border border-purple-200 dark:border-purple-800">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">MysticScribe</h3>
+              <a 
+                href="https://github.com/username/mysticscribe" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="text-purple-600 dark:text-purple-400 hover:text-purple-800 dark:hover:text-purple-300 transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-6 text-lg">
+              An intelligent document processing and note-taking application with AI-powered summarization, 
+              automatic tagging, and collaborative features for researchers and students.
+            </p>
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                AI-powered document summarization and analysis
+              </div>
+              <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Automatic citation and reference management
+              </div>
+              <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Cross-platform synchronization and collaboration
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">Python</span>
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">FastAPI</span>
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">OpenAI API</span>
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">Vue.js</span>
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- All Projects Grid -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">All Projects</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- NameMateAI -->
+          <Card 
+            title="NameMateAI"
+            description="AI-powered name generation tool for businesses, products, and creative projects. Uses machine learning to suggest relevant and available domain names with trademark checking."
+            href="https://github.com/username/namemateai"
+            tags={["AI/ML", "Business Tools", "Domain Analysis", "Trademark API"]}
+            date="2024"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Tech Stack:</strong> Python, TensorFlow, React, Express.js</p>
+              <p><strong>Status:</strong> Active development, beta testing phase</p>
+              <p><strong>Users:</strong> 500+ beta testers, 10K+ name generations</p>
+            </div>
+          </Card>
+          
+          <!-- Birthday Card Generator -->
+          <Card 
+            title="Birthday Card Generator"
+            description="Personalized birthday card creation tool with customizable templates, AI-generated messages, and direct printing/sharing capabilities. Family-friendly and privacy-focused."
+            href="https://github.com/username/birthday-card-generator"
+            tags={["Web App", "AI Generation", "Family Tools", "Privacy"]}
+            date="2023"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Tech Stack:</strong> JavaScript, Canvas API, Node.js, SQLite</p>
+              <p><strong>Features:</strong> 50+ templates, AI message generation</p>
+              <p><strong>Usage:</strong> 2K+ cards generated, open-source</p>
+            </div>
+          </Card>
+          
+          <!-- Open Course List Reader -->
+          <Card 
+            title="Open Course List Reader"
+            description="Web scraping tool for university course catalogs with intelligent parsing, schedule conflict detection, and prerequisite tracking. Helps students plan their academic path."
+            href="https://github.com/username/open-course-reader"
+            tags={["Web Scraping", "Education", "Data Processing", "Student Tools"]}
+            date="2023"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Tech Stack:</strong> Python, BeautifulSoup, Pandas, Flask</p>
+              <p><strong>Scope:</strong> 15+ universities supported</p>
+              <p><strong>Impact:</strong> Used by 1K+ students for course planning</p>
+            </div>
+          </Card>
+          
+          <!-- Cybersecurity Dashboard -->
+          <Card 
+            title="CyberSec Dashboard"
+            description="Real-time cybersecurity monitoring dashboard with threat intelligence feeds, incident tracking, and automated response capabilities for small-to-medium businesses."
+            href="https://github.com/username/cybersec-dashboard"
+            tags={["Cybersecurity", "Dashboard", "Threat Intelligence", "SMB"]}
+            date="2024"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Tech Stack:</strong> Python, React, InfluxDB, Grafana</p>
+              <p><strong>Features:</strong> Real-time monitoring, automated alerts</p>
+              <p><strong>Deployment:</strong> Docker containers, cloud-ready</p>
+            </div>
+          </Card>
+          
+          <!-- Economic Data Visualizer -->
+          <Card 
+            title="Economic Data Visualizer"
+            description="Interactive visualization platform for economic datasets with statistical analysis tools, trend prediction, and collaborative features for researchers and analysts."
+            href="https://github.com/username/econ-data-viz"
+            tags={["Economics", "Data Visualization", "Statistics", "Research"]}
+            date="2023"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Tech Stack:</strong> R, Shiny, D3.js, PostgreSQL</p>
+              <p><strong>Data Sources:</strong> Federal Reserve, World Bank, OECD</p>
+              <p><strong>Users:</strong> 200+ researchers and students</p>
+            </div>
+          </Card>
+          
+          <!-- Automation Scripts Collection -->
+          <Card 
+            title="DevOps Automation Suite"
+            description="Collection of automation scripts and tools for development workflows, deployment pipelines, and system administration tasks. Includes CI/CD templates and monitoring tools."
+            href="https://github.com/username/devops-automation"
+            tags={["DevOps", "Automation", "CI/CD", "System Administration"]}
+            date="2024"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Tools:</strong> Bash, Python, Docker, Terraform</p>
+              <p><strong>Coverage:</strong> AWS, Azure, GCP deployments</p>
+              <p><strong>Community:</strong> 100+ stars, active contributions</p>
+            </div>
+          </Card>
+          
+        </div>
+      </div>
+      
+      <!-- Open Source Contributions -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Open Source Contributions</h2>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Major Contributions -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Major Contributions</h3>
+              <div class="space-y-4">
+                <div class="border-l-4 border-l-green-500 pl-4">
+                  <h4 class="font-medium text-gray-900 dark:text-white">eBPF Community Tools</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Contributed documentation, examples, and bug fixes to the eBPF ecosystem
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                    15+ pull requests merged, 300+ lines of code
+                  </p>
+                </div>
+                
+                <div class="border-l-4 border-l-blue-500 pl-4">
+                  <h4 class="font-medium text-gray-900 dark:text-white">Educational Resources</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Created tutorials and guides for cybersecurity and economics students
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                    5K+ views, translated into 3 languages
+                  </p>
+                </div>
+                
+                <div class="border-l-4 border-l-purple-500 pl-4">
+                  <h4 class="font-medium text-gray-900 dark:text-white">Research Tools</h4>
+                  <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    Contributed to academic research software and data analysis tools
+                  </p>
+                  <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                    3 major projects, 50+ citations in academic work
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Community Stats -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Community Impact</h3>
+              <div class="space-y-4">
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600 dark:text-gray-300">GitHub Contributions</span>
+                    <span class="font-bold text-gray-900 dark:text-white">500+</span>
+                  </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600 dark:text-gray-300">Pull Requests Merged</span>
+                    <span class="font-bold text-gray-900 dark:text-white">75+</span>
+                  </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600 dark:text-gray-300">Issues Resolved</span>
+                    <span class="font-bold text-gray-900 dark:text-white">120+</span>
+                  </div>
+                </div>
+                
+                <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600 dark:text-gray-300">Stars Received</span>
+                    <span class="font-bold text-gray-900 dark:text-white">1.2K+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <!-- Technologies & Tools -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Technology Stack</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <!-- Technology badges -->
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div class="text-2xl mb-2">🐍</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Python</div>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div class="text-2xl mb-2">🌐</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">JavaScript</div>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div class="text-2xl mb-2">⚛️</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">React</div>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div class="text-2xl mb-2">🟢</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Node.js</div>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div class="text-2xl mb-2">🐳</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">Docker</div>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div class="text-2xl mb-2">☁️</div>
+            <div class="text-sm font-medium text-gray-900 dark:text-white">AWS</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+</Layout>

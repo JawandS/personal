@@ -1,0 +1,58 @@
+---
+// Base Layout Component
+// Provides consistent structure and meta tags for all pages
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Software engineer with a background in economics and DoD secret clearance." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <slot />
+    
+    <!-- Footer Component -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="text-center text-gray-600 dark:text-gray-400">
+          <p>&copy; 2025 Jawand Singh. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Dark mode toggle script -->
+    <script>
+      // Check for saved theme preference or default to 'light' mode
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+        return 'light';
+      })();
+      
+      if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+      
+      window.localStorage.setItem('theme', theme);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+---
+// About Page
+// Detailed information about education and background
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="About - Jawand Singh" description="Education and background information for Jawand Singh">
+  <Hero 
+    title="About Me" 
+    subtitle="Learn about my educational background and journey"
+    gradient="from-green-500 to-blue-600"
+  />
+  
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <!-- Education Section -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Education</h2>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
+                <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.75 2.524z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-2">
+                William & Mary
+              </h3>
+              <p class="text-lg text-primary-600 dark:text-primary-400 mb-2">
+                Bachelor of Science in Computer Science & Bachelor of Arts in Economics
+              </p>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                <strong>GPA:</strong> 3.98 | <strong>Expected Graduation:</strong> May 2026
+              </p>
+              
+              <!-- Coursework -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <!-- Computer Science Courses -->
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Computer Science</h4>
+                  <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                    <li>• Data Structures & Algorithms</li>
+                    <li>• Systems Programming</li>
+                    <li>• Computer Security</li>
+                    <li>• Database Systems</li>
+                    <li>• Software Engineering</li>
+                    <li>• Operating Systems</li>
+                    <li>• Computer Networks</li>
+                    <li>• Machine Learning</li>
+                    <li>• Web Development</li>
+                  </ul>
+                </div>
+                
+                <!-- Economics Courses -->
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Economics</h4>
+                  <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                    <li>• Microeconomic Theory</li>
+                    <li>• Macroeconomic Theory</li>
+                    <li>• Econometrics</li>
+                    <li>• Financial Economics</li>
+                    <li>• Industrial Organization</li>
+                    <li>• Game Theory</li>
+                    <li>• International Economics</li>
+                    <li>• Development Economics</li>
+                    <li>• Public Economics</li>
+                  </ul>
+                </div>
+                
+                <!-- Mathematics Courses -->
+                <div>
+                  <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Mathematics</h4>
+                  <ul class="space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                    <li>• Calculus I, II, III</li>
+                    <li>• Linear Algebra</li>
+                    <li>• Discrete Mathematics</li>
+                    <li>• Statistics & Probability</li>
+                    <li>• Differential Equations</li>
+                    <li>• Numerical Analysis</li>
+                    <li>• Abstract Algebra</li>
+                    <li>• Real Analysis</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Personal Statement -->
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">My Journey</h2>
+        
+        <div class="bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-lg p-8 border border-primary-200 dark:border-primary-800">
+          <div class="space-y-6 text-gray-700 dark:text-gray-300">
+            <p class="text-lg leading-relaxed">
+              My journey in technology began with a curiosity about how systems work and a desire to solve 
+              complex problems. The combination of Computer Science and Economics provides me with a unique 
+              perspective on technology's role in society and business.
+            </p>
+            
+            <p class="text-lg leading-relaxed">
+              Through my coursework at William & Mary, I've developed strong analytical skills and a 
+              deep understanding of both technical and economic principles. This interdisciplinary 
+              approach has been invaluable in my research and professional experiences.
+            </p>
+            
+            <p class="text-lg leading-relaxed">
+              My work at MITRE has exposed me to cutting-edge cybersecurity research, while my academic 
+              research has allowed me to explore the intersection of technology and economics. I'm 
+              particularly interested in how technology can be used to address economic challenges and 
+              improve societal outcomes.
+            </p>
+            
+            <p class="text-lg leading-relaxed">
+              Looking forward, I'm excited to continue building on this foundation and contribute to 
+              innovative projects that make a meaningful impact.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Academic Achievements -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Academic Highlights</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-yellow-600 dark:text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white ml-3">High Academic Standing</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">
+              Maintaining a 3.98 GPA while pursuing dual degrees in Computer Science and Economics, 
+              demonstrating excellence across both technical and analytical disciplines.
+            </p>
+          </div>
+          
+          <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border border-gray-200 dark:border-gray-700">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white ml-3">Research Experience</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300">
+              Active involvement in academic research projects spanning cybersecurity, economics, 
+              and interdisciplinary studies with multiple research publications and contributions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

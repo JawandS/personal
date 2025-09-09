@@ -1,0 +1,250 @@
+---
+// Research Page
+// Academic and industry research projects
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Research - Jawand Singh" description="Academic research projects and publications">
+  <Hero 
+    title="Research Portfolio" 
+    subtitle="Academic research, publications, and contributions to knowledge"
+    gradient="from-indigo-500 to-cyan-600"
+  />
+  
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Current Research -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Current Research Projects</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Honor's Thesis -->
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-8 border border-blue-200 dark:border-blue-800">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white ml-3">Honor's Thesis</h3>
+            </div>
+            <h4 class="text-lg font-medium text-blue-700 dark:text-blue-300 mb-3">
+              "Economic Impacts of Cybersecurity Investments in Enterprise Systems"
+            </h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Investigating the quantitative relationship between cybersecurity spending and economic outcomes 
+              in large enterprises, combining econometric analysis with system security metrics.
+            </p>
+            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Principal Investigator:</strong> Dr. Sarah Chen (Economics)</p>
+              <p><strong>Co-Advisor:</strong> Prof. Michael Rodriguez (Computer Science)</p>
+              <p><strong>Expected Completion:</strong> May 2026</p>
+              <p><strong>Status:</strong> Data Collection Phase</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">Econometrics</span>
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">Cybersecurity</span>
+              <span class="px-3 py-1 text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">Enterprise Systems</span>
+            </div>
+          </div>
+          
+          <!-- Secure Platforms Lab -->
+          <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-8 border border-purple-200 dark:border-purple-800">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-900 dark:text-white ml-3">Secure Platforms Lab</h3>
+            </div>
+            <h4 class="text-lg font-medium text-purple-700 dark:text-purple-300 mb-3">
+              "eBPF-Based Runtime Security Monitoring"
+            </h4>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Developing novel approaches to real-time system security monitoring using eBPF technology, 
+              focusing on performance optimization and threat detection accuracy.
+            </p>
+            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Principal Investigator:</strong> Prof. David Kim (Computer Science)</p>
+              <p><strong>Collaboration:</strong> MITRE Corporation</p>
+              <p><strong>Duration:</strong> September 2024 - Present</p>
+              <p><strong>Funding:</strong> NSF Grant #2024-SEC-8901</p>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">eBPF</span>
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">System Security</span>
+              <span class="px-3 py-1 text-xs font-medium bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full">Linux Kernel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Completed Research -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Completed Research</h2>
+        
+        <div class="space-y-8">
+          <!-- Economics Research -->
+          <Card 
+            title="Market Dynamics in Digital Platform Ecosystems"
+            description="Analyzed competition patterns and pricing strategies in digital platform markets using game-theoretic models and empirical data from major tech companies. Published findings in undergraduate research symposium."
+            date="Fall 2023 - Spring 2024"
+            tags={["Economics", "Game Theory", "Digital Markets", "Data Analysis"]}
+            className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 border-l-4 border-l-green-500"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Principal Investigator:</strong> Dr. Lisa Wong (Economics Department)</p>
+              <p><strong>Contribution:</strong> Lead researcher, data analysis, modeling</p>
+              <p><strong>Outcomes:</strong> Presented at 2024 Undergraduate Research Symposium</p>
+              <div class="flex space-x-4 mt-3">
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">📄 Paper Draft</a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">📊 Presentation</a>
+              </div>
+            </div>
+          </Card>
+          
+          <!-- George Mason Research -->
+          <Card 
+            title="Collaborative Research with George Mason University"
+            description="Cross-institutional research on cybersecurity policy implications for small and medium enterprises. Contributed to policy recommendations and implementation frameworks."
+            date="Summer 2023"
+            tags={["Cybersecurity Policy", "SME Research", "Policy Analysis", "Collaboration"]}
+            className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/10 dark:to-red-900/10 border-l-4 border-l-orange-500"
+          >
+            <div class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <p><strong>Principal Investigator:</strong> Dr. Amanda Foster (George Mason University)</p>
+              <p><strong>Local Coordinator:</strong> Prof. Robert Chen (William & Mary)</p>
+              <p><strong>Contribution:</strong> Policy analysis, data collection, literature review</p>
+              <p><strong>Outcomes:</strong> Contributed to policy brief published by GMU Policy Institute</p>
+              <div class="flex space-x-4 mt-3">
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">📋 Policy Brief</a>
+                <a href="#" class="text-primary-600 dark:text-primary-400 hover:underline">🔗 GMU Collaboration</a>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+      
+      <!-- Publications & Presentations -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Publications & Presentations</h2>
+        
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-200 dark:border-gray-700">
+          <!-- Publications List -->
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Conference Presentations</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-l-blue-500 pl-4">
+                <h4 class="font-medium text-gray-900 dark:text-white">
+                  "eBPF Applications in Modern Cybersecurity: A Performance Analysis"
+                </h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  William & Mary Student Research Conference, April 2024
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                  Co-authors: Prof. David Kim, Dr. Sarah Martinez (MITRE)
+                </p>
+              </div>
+              
+              <div class="border-l-4 border-l-green-500 pl-4">
+                <h4 class="font-medium text-gray-900 dark:text-white">
+                  "Economic Modeling of Platform Competition in Digital Markets"
+                </h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Virginia Undergraduate Research Symposium, March 2024
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                  Co-authors: Dr. Lisa Wong, Prof. Michael Thompson
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Manuscripts in Progress -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Manuscripts in Preparation</h3>
+            <div class="space-y-4">
+              <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                <h4 class="font-medium text-gray-900 dark:text-white">
+                  "Quantifying ROI of Cybersecurity Investments: An Empirical Study"
+                </h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Target Journal: Information Systems Research (ISR)
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                  Status: Data analysis phase, expected submission Fall 2025
+                </p>
+              </div>
+              
+              <div class="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
+                <h4 class="font-medium text-gray-900 dark:text-white">
+                  "Runtime Security Monitoring with eBPF: A Comprehensive Framework"
+                </h4>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Target Conference: IEEE Symposium on Security and Privacy
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                  Status: First draft complete, under review by co-authors
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Research Tools & Contributions -->
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Research Tools & Open Source Contributions</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Card 
+            title="EBPFSec Toolkit"
+            description="Open-source collection of eBPF programs for security monitoring and threat detection. Includes documentation and examples for researchers."
+            href="https://github.com/username/ebpfsec-toolkit"
+            tags={["eBPF", "Security", "Open Source", "Tools"]}
+          />
+          
+          <Card 
+            title="EconMetrics Helper"
+            description="Python package for econometric analysis, specifically designed for cybersecurity economics research with pre-built models and datasets."
+            href="https://pypi.org/project/econmetrics-helper/"
+            tags={["Python", "Economics", "PyPI", "Research"]}
+          />
+          
+          <Card 
+            title="Research Data Portal"
+            description="Web platform for sharing anonymized cybersecurity incident data and economic impact metrics for academic research purposes."
+            href="https://github.com/username/research-data-portal"
+            tags={["Web Platform", "Data Sharing", "Research", "API"]}
+          />
+          
+          <Card 
+            title="Policy Analysis Toolkit"
+            description="Collection of scripts and frameworks for analyzing cybersecurity policy impacts on business operations and economic outcomes."
+            href="https://github.com/username/policy-analysis-toolkit"
+            tags={["Policy Analysis", "Business Impact", "Scripts"]}
+          />
+          
+          <Card 
+            title="Academic Collaboration Bot"
+            description="Slack/Discord bot for managing research collaborations, tracking literature reviews, and organizing academic deadlines."
+            href="https://github.com/username/academic-collab-bot"
+            tags={["Automation", "Collaboration", "Academic Tools"]}
+          />
+          
+          <Card 
+            title="Conference Paper Tracker"
+            description="Tool for tracking conference deadlines, submission statuses, and research publication metrics with visualization capabilities."
+            href="https://github.com/username/conference-tracker"
+            tags={["Academic Publishing", "Visualization", "Tracking"]}
+          />
+        </div>
+      </div>
+      
+    </div>
+  </section>
+</Layout>
