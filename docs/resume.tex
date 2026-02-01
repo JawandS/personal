@@ -1,0 +1,185 @@
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkBlue}{HTML}{002244}
+\definecolor{DeepBlue}{HTML}{003366}
+\definecolor{RoyalBlue}{HTML}{00539C}
+\definecolor{SoftBlue}{HTML}{3B82F6}
+
+\colorlet{name}{black}
+\colorlet{tagline}{RoyalBlue}
+\colorlet{heading}{DarkBlue}
+\colorlet{headingrule}{DeepBlue}
+\colorlet{subheading}{RoyalBlue}
+\colorlet{accent}{RoyalBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=RoyalBlue,
+  linkcolor=RoyalBlue
+}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\normalsize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\begin{document}
+\name{Jawand Singh}
+\tagline{Software Engineer}
+
+\personalinfo{%
+  \email{JawandSingh@gmail.com}
+  \phone{571-466-6260}
+  \location{Williamsburg, VA}
+  \linkedin{Jawand}
+  \github{JawandS}
+  \NewInfoField{clearance}{\faLock}
+  \clearance{Secret Clearance}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+\cvsection{Work Experience}
+
+\cvevent{Software Engineer Contractor}{Lieberthal \& Associates, LLC}{September 2025 -- Present}{Remote}
+\begin{itemize}
+\item Provided software support on CAS and SOA funded research
+\item Created a validation tool for LLM performance on claims analysis
+\item Analyzing biased ML models using synthetic healthcare data
+\end{itemize}
+
+\divider
+
+\cvevent{Software Engineering Intern}{MITRE}{May 2024 -- September 2025}{McLean, VA}
+\begin{itemize}
+\item Refactored C/C++ and Python programs for memory management and signal processing
+\item Helped develop a complete app for ICD PDF to JSON conversion leveraging LLMs, SQLite, Python, and Flask
+\item Performed attack surface analysis using Rust and Svelte
+\item Implemented a cost model in Python with a UI and excel
+\end{itemize}
+
+\divider
+
+\cvevent{Programming Instructor}{CodAKid}{September 2023 -- May 2024}{Remote}
+\begin{itemize}
+\item Taught the fundamentals of programming in Java, Python, and Kotlin to new and mid-experience students
+\end{itemize}
+
+\divider
+
+\cvevent{Information Security Engineering Intern}{Appian}{June 2023 -- August 2023}{McLean, VA}
+\begin{itemize}
+\item Enhanced threat analysis by consolidating intelligence from 10 HTML/RSS feeds on an Appian app
+\item Supported security engineering by helping deploy Bash script updates to production
+\end{itemize}
+
+\cvsection{Selected Research \& Projects}
+\begin{itemize}[leftmargin=*]
+
+  \item \textbf{MajorMatch.me} \hfill 2025--Present \\
+  Production application using Cloudflare, Railway, Next.js, FastAPI, Redis, Postgres. Connects students to majors.
+
+  \item \textbf{Economics Research, William \& Mary} \hfill 2024--2026 \\
+  Developed \href{https://pypi.org/project/econ-llm/}{econ-llm} and \href{https://pypi.org/project/macroecon-tools/}{macroecon-tools} Python packages for experimental economics and macroeconomic modeling.
+
+  \item \textbf{OmniChat} - \href{https://github.com/JawandS/omni_chat}{github.com/JawandS/omni\_chat} \hfill 2025 \\
+   Abstracts multiple LLM APIs in a Flask + Tailwind app.
+
+  \item \textbf{MysticScribe} - \href{https://github.com/JawandS/MysticScribe}{github.com/JawandS/MysticScribe}\hfill 2025 \\
+  Created multi-agent CrewAI-based chapter generation system.
+
+  \item \textbf{NameMateAI} - \href{https://github.com/JawandS/NameMate}{github.com/JawandS/NameMate} \hfill 2023 \\
+  Acquired 10K+ users through SEO and targeted Google Ads.
+
+\end{itemize}
+
+\medskip
+
+\switchcolumn
+
+\cvsection{Summary}
+
+\begin{quote}
+Experienced in rapidly developing end-to-end software solutions leveraging LLMs and creating LLM-powered applications.
+\end{quote}
+
+\cvsection{Languages}
+
+\cvskill{Python, C/C++, Bash}{5}
+\divider
+
+\cvskill{HTML, CSS, JavaScript}{4}
+\divider
+
+\cvskill{Rust, SQL, Java}{3}
+\divider
+
+\cvskill{MATLAB, R, Kotlin}{2}
+
+\cvsection{Skills}
+
+\cvtag{Linux}
+\cvtag{Windows}
+\cvtag{MacOS} \\
+\cvtag{Git}
+\cvtag{RegEx}
+\cvtag{LaTeX} \\
+\cvtag{G-Suite and Office}
+\cvtag{Excel} \\
+\cvtag{OpenAI API}
+\cvtag{Codex}
+\cvtag{Claude Code}
+
+\medskip
+
+\cvsection{Education}
+
+\cvevent{B.S.\ Computer Science \& \ Economics}{William \& Mary}{Aug 2023 -- May 2026}{}
+\textit{GPA: 3.98/4.00}
+
+\cvsection{Awards}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Bennett Fellow, Terry Glenn Scholar} (W\&M Econ)
+  \item \textbf{Cisco Student Success Award} (W\&M CS)
+\item \textbf{Applause, Spark Awards} (MITRE) 
+\end{itemize}
+
+\cvsection{Courses}
+\cvtag{Edge Computing}
+\cvtag{Software Dev}
+\cvtag{Data Structures}
+\cvtag{Algorithms}
+\cvtag{Artificial Intelligence}
+\cvtag{Mobile/Web Dev}
+\cvtag{Econometrics}
+\cvtag{Game Theory}
+\cvtag{Linear Algebra}
+\cvtag{Statistics}
+\cvtag{Calculus}
+
+\end{paracol}
+
+\end{document}
