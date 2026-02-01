@@ -462,14 +462,64 @@ export default function CircularGallery({
   borderRadius = 0.05,
   font = 'bold 30px Figtree',
   scrollSpeed = 2,
-  scrollEase = 0.05
+  scrollEase = 0.05,
+  onItemClick
 }) {
   const containerRef = useRef(null);
+  const appRef = useRef(null);
+
   useEffect(() => {
     const app = new App(containerRef.current, { items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase });
+    appRef.current = app;
     return () => {
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || !onItemClick) return;
+
+    const handleClick = (e) => {
+      const app = appRef.current;
+      if (!app || !app.medias || app.isDown) return;
+
+      // Check if this was a drag (not a click)
+      const dragThreshold = 5;
+      if (app.start !== undefined) {
+        const endX = e.clientX;
+        if (Math.abs(app.start - endX) > dragThreshold) return;
+      }
+
+      // Find which card was clicked based on position
+      const rect = container.getBoundingClientRect();
+      const clickX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+
+      // Find the card closest to center (the "selected" one)
+      let closestMedia = null;
+      let closestDistance = Infinity;
+
+      app.medias.forEach((media, index) => {
+        const distance = Math.abs(media.plane.position.x);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestMedia = media;
+        }
+      });
+
+      // Only trigger if click is near center and card is close to center
+      if (closestMedia && closestDistance < 1.5 && Math.abs(clickX) < 0.3) {
+        const originalIndex = closestMedia.index % (app.mediasImages.length / 2);
+        const item = items[originalIndex];
+        if (item) {
+          onItemClick(item, originalIndex);
+        }
+      }
+    };
+
+    container.addEventListener('click', handleClick);
+    return () => container.removeEventListener('click', handleClick);
+  }, [items, onItemClick]);
+
   return <div className="circular-gallery" ref={containerRef} />;
 }
