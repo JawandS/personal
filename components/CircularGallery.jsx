@@ -305,8 +305,21 @@ class App {
     this.onResize();
     this.createGeometry();
     this.createMedias(items, bend, textColor, borderRadius, font);
+    this.setInitialScroll();
     this.update();
     this.addEventListeners();
+  }
+  setInitialScroll() {
+    // Center on Experience (index 2), with Projects to left and Research to right
+    if (this.medias && this.medias[0] && !this.initialScrollSet) {
+      const itemWidth = this.medias[0].width;
+      const centerIndex = 2; // Experience
+      const initialOffset = itemWidth * centerIndex;
+      this.scroll.current = initialOffset;
+      this.scroll.target = initialOffset;
+      this.scroll.last = initialOffset;
+      this.initialScrollSet = true;
+    }
   }
   createRenderer() {
     this.renderer = new Renderer({
