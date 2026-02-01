@@ -7,7 +7,7 @@ export default function ContactPage() {
       <div className="w-full max-w-md space-y-4">
         <a
           href={`mailto:${contact.email}`}
-          className="flex items-center gap-4 rounded-xl border border-purple-500/30 bg-purple-900/20 p-4 backdrop-blur-sm transition-all hover:border-purple-400/50 hover:bg-purple-800/30"
+          className="flex items-center gap-4 rounded-xl border border-purple-400/40 bg-purple-950/80 p-4 backdrop-blur-md shadow-lg transition-all hover:border-purple-400/60 hover:bg-purple-900/80"
         >
           <span className="text-2xl">✉️</span>
           <div>
@@ -15,7 +15,7 @@ export default function ContactPage() {
             <p className="text-white">{contact.email}</p>
           </div>
         </a>
-        <div className="flex items-center gap-4 rounded-xl border border-purple-500/30 bg-purple-900/20 p-4 backdrop-blur-sm">
+        <div className="flex items-center gap-4 rounded-xl border border-purple-400/40 bg-purple-950/80 p-4 backdrop-blur-md shadow-lg">
           <span className="text-2xl">📍</span>
           <div>
             <p className="text-sm text-purple-300">Location</p>
@@ -26,7 +26,7 @@ export default function ContactPage() {
           href={contact.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-4 rounded-xl border border-purple-500/30 bg-purple-900/20 p-4 backdrop-blur-sm transition-all hover:border-purple-400/50 hover:bg-purple-800/30"
+          className="flex items-center gap-4 rounded-xl border border-purple-400/40 bg-purple-950/80 p-4 backdrop-blur-md shadow-lg transition-all hover:border-purple-400/60 hover:bg-purple-900/80"
         >
           <span className="text-2xl">💼</span>
           <div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
           href={contact.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-4 rounded-xl border border-purple-500/30 bg-purple-900/20 p-4 backdrop-blur-sm transition-all hover:border-purple-400/50 hover:bg-purple-800/30"
+          className="flex items-center gap-4 rounded-xl border border-purple-400/40 bg-purple-950/80 p-4 backdrop-blur-md shadow-lg transition-all hover:border-purple-400/60 hover:bg-purple-900/80"
         >
           <span className="text-2xl">🐙</span>
           <div>
