@@ -11,12 +11,8 @@ export default function AboutPage() {
           <p className="text-lg leading-relaxed text-purple-100">
             Software engineer with a background in economics and DoD secret clearance.
             Experienced in rapidly developing end-to-end software solutions leveraging
-            LLMs and creating LLM-powered applications.
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-purple-100">
-            Currently pursuing a B.S. in Computer Science & Economics at William & Mary
-            with a 3.98 GPA. I work across the full stack—from low-level C/C++ memory
-            management and signal processing to modern web frontends and AI-powered backends.
+            LLMs and creating LLM-powered applications. Currently pursuing a B.S. in Computer Science & Economics at William & Mary
+            with a 3.98 GPA.
           </p>
         </div>
 
