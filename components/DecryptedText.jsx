@@ -14,6 +14,7 @@ const DecryptedText = ({
   revealDirection = "start",
   sequential = false,
   useOriginalCharsOnly = false,
+  onComplete = () => {},
 }) => {
   const getInitialEncrypted = () => {
     return text
@@ -85,6 +86,7 @@ const DecryptedText = ({
         setDisplayText(text);
         setIsAnimating(false);
         setHasAnimated(true);
+        onComplete();
       }
     }, speed);
   }, [
@@ -95,6 +97,7 @@ const DecryptedText = ({
     isAnimating,
     sequential,
     revealDirection,
+    onComplete,
   ]);
 
   useEffect(() => {

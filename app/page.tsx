@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import dynamic from "next/dynamic";
 
 // Colors from CSS variables (Three.js needs hex values directly)
@@ -20,10 +21,32 @@ const GlareHover = dynamic(() => import("@/components/GlareHover"), {
   ssr: false,
 });
 
+const CircularGallery = dynamic(
+  () => import("@/components/CircularGallery"),
+  { ssr: false }
+);
+
+const navItems = [
+  { image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop", text: "Projects" },
+  { image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop", text: "Work" },
+  { image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop", text: "Research" },
+  { image: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&h=600&fit=crop", text: "Contact" },
+  { image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop", text: "About" },
+];
+
 export default function Home() {
+  const [animationComplete, setAnimationComplete] = useState(false);
+  const [showGallery, setShowGallery] = useState(false);
+
+  const handleAnimationComplete = () => {
+    setAnimationComplete(true);
+    // Delay gallery appearance slightly for smoother transition
+    setTimeout(() => setShowGallery(true), 300);
+  };
+
   return (
     <div
-      className="relative min-h-screen w-full"
+      className="relative h-screen w-full overflow-hidden"
       style={{ backgroundColor: "var(--purple-deep)" }}
     >
       <div className="fixed inset-0">
@@ -45,7 +68,15 @@ export default function Home() {
           fieldStrength={10}
         />
       </div>
-      <main className="pointer-events-none relative z-10 flex min-h-screen flex-col items-center justify-center px-8 pb-24">
+
+      {/* Hero Section - fades to top when animation completes */}
+      <section
+        className={`pointer-events-none absolute inset-0 z-10 flex flex-col items-center px-8 transition-all duration-1000 ease-out ${
+          animationComplete
+            ? "justify-start pt-12 opacity-60 scale-75"
+            : "justify-center pb-24"
+        }`}
+      >
         <GlareHover
           width="auto"
           height="auto"
@@ -68,6 +99,7 @@ export default function Home() {
               maxIterations={35}
               sequential
               revealDirection="start"
+              onComplete={handleAnimationComplete}
             />
           </h1>
         </GlareHover>
@@ -99,7 +131,25 @@ export default function Home() {
             />
           </p>
         </GlareHover>
-      </main>
+      </section>
+
+      {/* Navigation Gallery - slides up from bottom */}
+      <section
+        className={`absolute inset-x-0 bottom-0 z-20 h-[70vh] transition-all duration-1000 ease-out ${
+          showGallery
+            ? "translate-y-0 opacity-100"
+            : "translate-y-full opacity-0"
+        }`}
+      >
+        <CircularGallery
+          items={navItems}
+          bend={1}
+          textColor="#ffffff"
+          borderRadius={0.05}
+          scrollSpeed={2}
+          scrollEase={0.05}
+        />
+      </section>
     </div>
   );
 }
