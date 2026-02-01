@@ -13,6 +13,7 @@ const GlareHover = ({
   glareSize = 250,
   transitionDuration = 650,
   playOnce = false,
+  active = false,
   className = '',
   style = {}
 }) => {
@@ -44,7 +45,7 @@ const GlareHover = ({
 
   return (
     <div
-      className={`glare-hover ${playOnce ? 'glare-hover--play-once' : ''} ${className}`}
+      className={`glare-hover ${playOnce ? 'glare-hover--play-once' : ''} ${active ? 'glare-hover--active' : ''} ${className}`}
       style={{ ...vars, ...style }}
     >
       {children}

@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 
 const AntigravityInner = ({
@@ -26,6 +26,18 @@ const AntigravityInner = ({
   const lastMousePos = useRef({ x: 0, y: 0 });
   const lastMouseMoveTime = useRef(0);
   const virtualMouse = useRef({ x: 0, y: 0 });
+  const windowMouse = useRef({ x: 0, y: 0 });
+
+  // Track mouse position from window events so it works even when other elements are on top
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      // Convert window coordinates to normalized device coordinates (-1 to 1)
+      windowMouse.current.x = (e.clientX / window.innerWidth) * 2 - 1;
+      windowMouse.current.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   const particles = useMemo(() => {
     const temp = [];
@@ -72,7 +84,8 @@ const AntigravityInner = ({
     const mesh = meshRef.current;
     if (!mesh) return;
 
-    const { viewport: v, pointer: m } = state;
+    const { viewport: v } = state;
+    const m = windowMouse.current;
 
     const mouseDist = Math.sqrt(Math.pow(m.x - lastMousePos.current.x, 2) + Math.pow(m.y - lastMousePos.current.y, 2));
 

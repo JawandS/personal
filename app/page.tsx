@@ -35,13 +35,22 @@ const navItems = [
 ];
 
 export default function Home() {
+  const [triggerGlare, setTriggerGlare] = useState(false);
   const [animationComplete, setAnimationComplete] = useState(false);
   const [showGallery, setShowGallery] = useState(false);
 
   const handleAnimationComplete = () => {
-    setAnimationComplete(true);
-    // Delay gallery appearance slightly for smoother transition
-    setTimeout(() => setShowGallery(true), 300);
+    // Pause after decrypt completes
+    setTimeout(() => {
+      // Trigger glare flash on text
+      setTriggerGlare(true);
+      // After glare animation, start slide up
+      setTimeout(() => {
+        setAnimationComplete(true);
+        // Gallery slides in after hero starts moving
+        setTimeout(() => setShowGallery(true), 200);
+      }, 400);
+    }, 500);
   };
 
   return (
@@ -84,10 +93,11 @@ export default function Home() {
           borderRadius="8px"
           borderColor="transparent"
           glareColor="#A855F7"
-          glareOpacity={0.3}
+          glareOpacity={0.5}
           glareAngle={-30}
           glareSize={300}
-          transitionDuration={800}
+          transitionDuration={400}
+          active={triggerGlare}
           className="pointer-events-auto"
           style={{ padding: "1rem 2rem" }}
         >
@@ -95,8 +105,8 @@ export default function Home() {
             <DecryptedText
               text="Jawand Singh"
               animateOn="view"
-              speed={100}
-              maxIterations={35}
+              speed={35}
+              maxIterations={25}
               sequential
               revealDirection="start"
               onComplete={handleAnimationComplete}
@@ -110,10 +120,11 @@ export default function Home() {
           borderRadius="8px"
           borderColor="transparent"
           glareColor="#A855F7"
-          glareOpacity={0.2}
+          glareOpacity={0.4}
           glareAngle={-30}
           glareSize={300}
-          transitionDuration={800}
+          transitionDuration={400}
+          active={triggerGlare}
           className="pointer-events-auto mt-4"
           style={{ padding: "0.5rem 1.5rem" }}
         >
@@ -124,8 +135,8 @@ export default function Home() {
             <DecryptedText
               text="Software Engineer"
               animateOn="view"
-              speed={110}
-              maxIterations={30}
+              speed={35}
+              maxIterations={20}
               sequential
               revealDirection="start"
             />
@@ -150,6 +161,7 @@ export default function Home() {
           scrollEase={0.05}
         />
       </section>
+
     </div>
   );
 }

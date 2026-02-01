@@ -51,3 +51,10 @@
     100% 100%,
     0 0;
 }
+
+/* Programmatic trigger for glare animation */
+.glare-hover--active::before {
+  background-position:
+    100% 100%,
+    0 0;
+}
