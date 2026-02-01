@@ -33,10 +33,10 @@ const PageTransition = dynamic(
 
 const navItems = [
   { image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop", text: "About", id: "about" },
-  { image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop", text: "Projects", id: "projects" },
-  { image: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop", text: "Experience", id: "experience" },
-  { image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800&h=600&fit=crop", text: "Research", id: "research" },
-  { image: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=800&h=600&fit=crop", text: "Contact", id: "contact" },
+  { image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop", text: "Projects", id: "projects" },
+  { image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&h=600&fit=crop", text: "Experience", id: "experience" },
+  { image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop", text: "Research", id: "research" },
+  { image: "https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?w=800&h=600&fit=crop", text: "Contact", id: "contact" },
 ];
 
 // Experience data from resume
@@ -130,7 +130,6 @@ const research = [
 // Contact info
 const contact = {
   email: "JawandSingh@gmail.com",
-  phone: "571-466-6260",
   location: "Williamsburg, VA",
   linkedin: "https://linkedin.com/in/Jawand",
   github: "https://github.com/JawandS",
@@ -276,16 +275,6 @@ function ContactSection({ onBack }: { onBack: () => void }) {
           <div>
             <p className="text-sm text-purple-300">Email</p>
             <p className="text-white">{contact.email}</p>
-          </div>
-        </a>
-        <a
-          href={`tel:${contact.phone}`}
-          className="flex items-center gap-4 rounded-xl border border-purple-500/30 bg-purple-900/20 p-4 backdrop-blur-sm transition-all hover:border-purple-400/50 hover:bg-purple-800/30"
-        >
-          <span className="text-2xl">📱</span>
-          <div>
-            <p className="text-sm text-purple-300">Phone</p>
-            <p className="text-white">{contact.phone}</p>
           </div>
         </a>
         <div className="flex items-center gap-4 rounded-xl border border-purple-500/30 bg-purple-900/20 p-4 backdrop-blur-sm">
