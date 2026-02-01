@@ -491,24 +491,33 @@ export default function CircularGallery({
         if (Math.abs(app.start - endX) > dragThreshold) return;
       }
 
-      // Find which card was clicked based on position
+      // Convert click position to viewport coordinates
       const rect = container.getBoundingClientRect();
-      const clickX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const clickNormalizedX = (e.clientX - rect.left) / rect.width;
+      // Convert to viewport space (same coordinate system as planes)
+      const clickViewportX = (clickNormalizedX - 0.5) * app.viewport.width;
 
-      // Find the card closest to center (the "selected" one)
+      // Find the card closest to the click position
       let closestMedia = null;
       let closestDistance = Infinity;
 
-      app.medias.forEach((media, index) => {
-        const distance = Math.abs(media.plane.position.x);
-        if (distance < closestDistance) {
-          closestDistance = distance;
+      app.medias.forEach((media) => {
+        // Calculate distance from click to card center
+        const cardX = media.plane.position.x;
+        const cardHalfWidth = media.plane.scale.x / 2;
+
+        // Check if click is within card bounds (with some padding)
+        const distanceToCard = Math.abs(clickViewportX - cardX);
+
+        if (distanceToCard < closestDistance) {
+          closestDistance = distanceToCard;
           closestMedia = media;
         }
       });
 
-      // Only trigger if click is near center and card is close to center
-      if (closestMedia && closestDistance < 1.5 && Math.abs(clickX) < 0.3) {
+      // Trigger click if we found a card and click is reasonably close to it
+      const clickThreshold = closestMedia ? closestMedia.plane.scale.x * 0.7 : 2;
+      if (closestMedia && closestDistance < clickThreshold) {
         const originalIndex = closestMedia.index % (app.mediasImages.length / 2);
         const item = items[originalIndex];
         if (item) {
