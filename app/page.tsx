@@ -12,6 +12,10 @@ const Antigravity = dynamic(() => import("@/components/Antigravity"), {
   ssr: false,
 });
 
+const DecryptedText = dynamic(() => import("@/components/DecryptedText"), {
+  ssr: false,
+});
+
 export default function Home() {
   return (
     <div
@@ -37,10 +41,29 @@ export default function Home() {
           fieldStrength={10}
         />
       </div>
-      <main className="pointer-events-none relative z-10 flex min-h-screen flex-col items-center justify-center px-8">
-        <h1 className="text-4xl font-bold text-white">Jawand Singh</h1>
-        <p className="mt-4 text-lg" style={{ color: "var(--purple-lavender)" }}>
-          Software Engineer
+      <main className="pointer-events-none relative z-10 flex min-h-screen flex-col items-center justify-center px-8 pb-24">
+        <h1 className="text-5xl font-bold tracking-tight text-white md:text-6xl lg:text-7xl">
+          <DecryptedText
+            text="Jawand Singh"
+            animateOn="view"
+            speed={120}
+            maxIterations={35}
+            sequential
+            revealDirection="start"
+          />
+        </h1>
+        <p
+          className="mt-6 text-2xl tracking-wide md:text-3xl lg:text-4xl"
+          style={{ color: "var(--purple-lavender)" }}
+        >
+          <DecryptedText
+            text="Software Engineer"
+            animateOn="view"
+            speed={110}
+            maxIterations={30}
+            sequential
+            revealDirection="start"
+          />
         </p>
       </main>
     </div>
