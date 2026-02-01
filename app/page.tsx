@@ -40,17 +40,17 @@ export default function Home() {
   const [showGallery, setShowGallery] = useState(false);
 
   const handleAnimationComplete = () => {
-    // Pause after decrypt completes
+    // Pause after decrypt completes - let it breathe
     setTimeout(() => {
       // Trigger glare flash on text
       setTriggerGlare(true);
-      // After glare animation, start slide up
+      // Wait for glare to complete, then pause before slide up
       setTimeout(() => {
         setAnimationComplete(true);
         // Gallery slides in after hero starts moving
-        setTimeout(() => setShowGallery(true), 200);
-      }, 400);
-    }, 500);
+        setTimeout(() => setShowGallery(true), 400);
+      }, 800);
+    }, 600);
   };
 
   return (
@@ -80,7 +80,7 @@ export default function Home() {
 
       {/* Hero Section - fades to top when animation completes */}
       <section
-        className={`pointer-events-none absolute inset-0 z-10 flex flex-col items-center px-8 transition-all duration-1000 ease-out ${
+        className={`pointer-events-none absolute inset-0 z-10 flex flex-col items-center px-8 transition-all duration-[1200ms] ease-out ${
           animationComplete
             ? "justify-start pt-12 opacity-60 scale-75"
             : "justify-center pb-24"
@@ -96,7 +96,7 @@ export default function Home() {
           glareOpacity={0.5}
           glareAngle={-30}
           glareSize={300}
-          transitionDuration={400}
+          transitionDuration={600}
           active={triggerGlare}
           className="pointer-events-auto"
           style={{ padding: "1rem 2rem" }}
@@ -105,8 +105,8 @@ export default function Home() {
             <DecryptedText
               text="Jawand Singh"
               animateOn="view"
-              speed={35}
-              maxIterations={25}
+              speed={50}
+              maxIterations={20}
               sequential
               revealDirection="start"
               onComplete={handleAnimationComplete}
@@ -123,7 +123,7 @@ export default function Home() {
           glareOpacity={0.4}
           glareAngle={-30}
           glareSize={300}
-          transitionDuration={400}
+          transitionDuration={600}
           active={triggerGlare}
           className="pointer-events-auto mt-4"
           style={{ padding: "0.5rem 1.5rem" }}
@@ -135,8 +135,8 @@ export default function Home() {
             <DecryptedText
               text="Software Engineer"
               animateOn="view"
-              speed={35}
-              maxIterations={20}
+              speed={55}
+              maxIterations={18}
               sequential
               revealDirection="start"
             />
@@ -146,7 +146,7 @@ export default function Home() {
 
       {/* Navigation Gallery - slides up from bottom */}
       <section
-        className={`absolute inset-x-0 bottom-0 z-20 h-[70vh] transition-all duration-1000 ease-out ${
+        className={`absolute inset-x-0 bottom-0 z-20 h-[70vh] transition-all duration-[1200ms] ease-out ${
           showGallery
             ? "translate-y-0 opacity-100"
             : "translate-y-full opacity-0"
