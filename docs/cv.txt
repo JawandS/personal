@@ -1,0 +1,129 @@
+Summary Statement: Software engineer with a background in economics and DoD secret clearance
+
+EDUCATION
+
+William & Mary | Williamsburg, VA | Graduation Date: May 2026
+B.S. Computer Science and Economics (GPA: 3.98/4.00)
+Computer Science: Edge Computing, Software Dev, Algorithms, Data/Discrete Structures, Computer Organization
+Economics: Econometrics, Game Theory, Intermediate Macro/Micro, Global Econ History
+Math: Linear Algebra, Statistics, Calculus, Operations Research
+
+SKILLS & CERTIFICATES
+
+Languages (Proficient): Python, C/C++, Bash, RegEx
+Languages (Familiar): Rust, Java, JavaScript, HTML/CSS, SQL
+Languages (Novice): R, MatLAb, Kotlin, Svelte
+Tools/Tech: Windows, Linux CLI, Copilot, ChatGPT, Git, eBPF, LaTex, GIS, VSCode, PyCharm, G-Suite, Office
+Certificates: C++ Data Structures (2024), Cyber Foundations (2023), IBM AI Engineering (2021) 
+
+PROFESSIONAL EXPERIENCE
+
+MajorMatch | Founder & CEO | 10/2025 - Present
+Leading a small team to develop B2B and B2C marketing content
+Created a full-stack production web app with 200+ usages 
+Working on GTM, including cold emails and sales calls
+
+Lieberthal & Associates | Software Engineer, Contractor | 09/2025 - Present
+Contract with CAS: Unstructured Claims data
+Processing unstructured synthetic claims data using LLMs (OpenAI API, and Ollama)
+Created a GUI to help manage synthetic data generation 
+Made a validation and analytics site (validate.jawand.dev)
+Looking into using features for the triangle method and other actuarial methods
+Contract with SOA: ML bias
+Creating a model card generation tool (model.jawand.dev)
+Investigating synthetic data with Synthea and biasing data
+
+MITRE | Software Engineer Intern | 05/2024 - 09/2025 | McLean, VA
+Outcomes
+Created two full-stack web applications, delivered one to the Sponsor and integrated LLM parsing into the other
+Contributed to an internal technical report using economic cost analysis for attritable aircraft acquisition 
+Developed in Python, C, C++, Bash, Makefiles, HTML/CSS, JavaScript, Svelte, and Rust
+Used concepts including concurrency, memory management, visualization, UI/UX, DevOps
+Worked on EGADS for the past 15 months including the school year, and balanced three projects over the summer
+
+Project 1
+Refactored a signal processing algorithm, developed visuals, and integrated new capabilities 
+Refactored a multithreaded data sampling C program involving Makefile/bash build scripts and systemd processes
+Transformed and visualized GPS anomaly data using GIS, database APIs, JSON, Python, and web development 
+
+Project 2 
+Helped create a web app using LLMs to process PDFs into standardized JSON 
+Working on a data transformation system in Rust with visualization through Svelte Kit 
+
+Project 3
+Implemented a cost model in Python with an HTML/CSS UI and automated input parsing, running, and visualization  
+
+General
+Won a machine learning hackathon, integrated Generative AI into workflow, worked on git management 
+Analyzed project requirements and used full stack skills (operating system, databases, web servers, and frontend)
+
+
+CodAKid | Programming Instructor | 09/2023 - 05/2024 | Remote
+Taught the fundamentals of programming in Java, Python, and Scratch to new and mid-experience students
+Appian Corporation | Information Security Engineer Intern |06/2023 - 08/2023 | McLean, VA
+Improved threat analysis by consolidating threat intelligence from HTMLS/RSS feeds on an Appian web app
+Provided engineering support on Bash scripts to security engineers and pushed changes to production
+
+RESEARCH EXPERIENCE
+
+William & Mary, Computer Science Department | Honor’s Thesis |06/2025 - Present
+Advisors: Prof. Sidi Lu (CSCI, William & Mary)
+Investigating inflation forecasting using an ABM model (github.com/JawandS/macroeconvue)
+Using LLMs for software development and in applications
+Pivoted to researching MajorMatch
+
+William & Mary, Economics Department | Student Researcher |01/2025 - 01/2026
+PI: Prof. Robert Hicks (Economics, William & Mary) and Prof. Lisa Anderson (Economics, William & Mary)
+Leveraging prompt engineering to research the use of LLMs as agents in experimental economics in game theory
+Created a web agent and platform to automate experiment execution and data collection 
+Developed a python package (econ-llm) (https://pypi.org/project/econ-llm/)  to automate data management
+
+William & Mary, Economics Department | Research Assistant |06/2024 - 05/2025
+PI: Prof. Nathaniel Throckmorton (Economics, William & Mary)
+Developing an open-source Python package (macroecon-tools) (https://pypi.org/project/macroecon-tools/) that extends Pandas DataFrame and Series
+Using generative AI to translate computational macroeconomics models from MATLAB to Python 
+
+William & Mary Secure Platforms Lab | Undergraduate Research Assistant |08/2023 - 05/2024
+PI: Prof. Adwait Nadkarni (Computer Science, William & Mary) 
+Used web scraping and natural language processing to analyze the security/privacy of campaign sites
+Independently maintained a research schedule and logs, drafted a journal extension, maintained a repository 
+George Mason University, Computer Science Department |Research Intern |05/2022 - 06/2023
+PI: Prof. Songqing Chen (Computer Science, George Mason University)
+Measured, analyzed, and visualized eBPF tracing overhead on Ubuntu servers using bpftrace and Python
+Visualized TensorFlow behavior on Ubuntu by using context switch tracing during program execution
+
+PROJECTS
+
+MajorMatch
+Full stack production app: Next.js on Cloudflare pages with FastAPI, Postgres, Redis on Railway for backend. 
+https://MajorMatch.me
+
+
+OmniChat
+Creating a UI to unify a variety of LLM APIs using a flask + tailwind dev stack
+https://github.com/JawandS/omni_chat
+
+
+MysticScribe
+Used CrewAI to create an agentic framework to generate fiction chapters with human in the loop feedback
+https://github.com/JawandS/MysticScribe
+
+NameMateAI | Developer | 11/2022 - 01/2023 | Remote
+Leveraged OpenAI API (GPT-3.5) for name generation by building a web app on Wix Velo using JavaScript. Captured 10K+ users by collaborating on frontend design, search engine optimization, and Google Ads.
+github.com/JawandS/NameMate
+
+Birthday Card Generator
+Built an HTML/CSS + Flask web app for birthday card generation powered by Dall-E 3 for image generation.
+github.com/JawandS/birthday-card
+
+Open Course List Reader
+Created an automated detection and notification system for the course list (deprecated) at W&M.
+github.com/JawandS/WM_OCL_Reader
+
+HONORS & AWARD
+
+Bennett Fellowship (W&M Econ)
+Terry Glenn Memorial Scholarship (W&M Econ)
+Cisco Student Success Award (W&M CSCI)
+Applause Award, Spark Award  (MITRE)
+
