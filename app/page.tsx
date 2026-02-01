@@ -32,24 +32,36 @@ const PageTransition = dynamic(
 );
 
 const navItems = [
-  { image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&h=600&fit=crop", text: "About", id: "about" },
-  { image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&h=600&fit=crop", text: "Projects", id: "projects" },
-  { image: "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800&h=600&fit=crop", text: "Experience", id: "experience" },
-  { image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop", text: "Research", id: "research" },
-  { image: "https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?w=800&h=600&fit=crop", text: "Contact", id: "contact" },
+  { image: "/nature.jpg", text: "About", id: "about" },
+  { image: "/majormatch.png", text: "Projects", id: "projects" },
+  { image: "/laptop.png", text: "Experience", id: "experience" },
+  { image: "/server.png", text: "Research", id: "research" },
+  { image: "/letters.png", text: "Contact", id: "contact" },
 ];
 
 // Experience data from resume
 const experiences = [
+  {
+    title: "Founder & CEO",
+    company: "MajorMatch",
+    period: "October 2025 – Present",
+    location: "Remote",
+    items: [
+      "Leading a small team to develop B2B and B2C marketing content",
+      "Created a full-stack production web app with 200+ usages",
+      "Working on GTM strategy, including cold emails and sales calls",
+    ],
+  },
   {
     title: "Software Engineer Contractor",
     company: "Lieberthal & Associates, LLC",
     period: "September 2025 – Present",
     location: "Remote",
     items: [
-      "Provided software support on CAS and SOA funded research",
-      "Created a validation tool for LLM performance on claims analysis",
-      "Analyzing biased ML models using synthetic healthcare data",
+      "CAS Contract: Processing unstructured synthetic claims data using LLMs (OpenAI API, Ollama)",
+      "Created a GUI for synthetic data generation and a validation/analytics site",
+      "SOA Contract: Creating a model card generation tool for ML bias investigation",
+      "Investigating synthetic data generation with Synthea",
     ],
   },
   {
@@ -58,10 +70,11 @@ const experiences = [
     period: "May 2024 – September 2025",
     location: "McLean, VA",
     items: [
-      "Refactored C/C++ and Python programs for memory management and signal processing",
-      "Developed app for ICD PDF to JSON conversion leveraging LLMs, SQLite, Python, and Flask",
-      "Performed attack surface analysis using Rust and Svelte",
-      "Implemented a cost model in Python with a UI and Excel integration",
+      "Created two full-stack web applications; delivered one to Sponsor with integrated LLM parsing",
+      "Refactored signal processing algorithms and multithreaded C programs with systemd processes",
+      "Developed data transformation system in Rust with Svelte Kit visualization",
+      "Implemented a cost model in Python with HTML/CSS UI and automated input parsing",
+      "Won a machine learning hackathon; balanced three concurrent projects",
     ],
   },
   {
@@ -70,7 +83,7 @@ const experiences = [
     period: "September 2023 – May 2024",
     location: "Remote",
     items: [
-      "Taught fundamentals of programming in Java, Python, and Kotlin to students of varying experience levels",
+      "Taught fundamentals of programming in Java, Python, and Scratch to students of varying experience levels",
     ],
   },
   {
@@ -79,8 +92,8 @@ const experiences = [
     period: "June 2023 – August 2023",
     location: "McLean, VA",
     items: [
-      "Enhanced threat analysis by consolidating intelligence from 10 HTML/RSS feeds on an Appian app",
-      "Supported security engineering by helping deploy Bash script updates to production",
+      "Improved threat analysis by consolidating intelligence from HTML/RSS feeds on an Appian web app",
+      "Provided engineering support on Bash scripts and pushed changes to production",
     ],
   },
 ];
@@ -90,40 +103,94 @@ const projects = [
   {
     name: "MajorMatch.me",
     year: "2025–Present",
-    description: "Production application using Cloudflare, Railway, Next.js, FastAPI, Redis, Postgres. Connects students to majors.",
-    link: null,
+    description: "Full-stack production app connecting students to majors. Built with Next.js on Cloudflare Pages, FastAPI, Postgres, and Redis on Railway. 200+ usages.",
+    github: null,
+    live: "https://MajorMatch.me",
   },
   {
     name: "OmniChat",
     year: "2025",
-    description: "Abstracts multiple LLM APIs in a Flask + Tailwind app.",
-    link: "https://github.com/JawandS/omni_chat",
+    description: "UI to unify multiple LLM APIs using Flask + Tailwind dev stack.",
+    github: "https://github.com/JawandS/omni_chat",
+    live: null,
   },
   {
     name: "MysticScribe",
     year: "2025",
-    description: "Multi-agent CrewAI-based chapter generation system.",
-    link: "https://github.com/JawandS/MysticScribe",
+    description: "Agentic framework using CrewAI to generate fiction chapters with human-in-the-loop feedback.",
+    github: "https://github.com/JawandS/MysticScribe",
+    live: null,
   },
   {
     name: "NameMateAI",
+    year: "2022–2023",
+    description: "Name generation web app leveraging OpenAI API (GPT-3.5) built on Wix Velo. Captured 10K+ users through SEO and Google Ads.",
+    github: "https://github.com/JawandS/NameMate",
+    live: null,
+  },
+  {
+    name: "Birthday Card Generator",
+    year: "2024",
+    description: "HTML/CSS + Flask web app for birthday card generation powered by DALL-E 3 for image generation.",
+    github: "https://github.com/JawandS/birthday-card",
+    live: null,
+  },
+  {
+    name: "Open Course List Reader",
     year: "2023",
-    description: "Acquired 10K+ users through SEO and targeted Google Ads.",
-    link: "https://github.com/JawandS/NameMate",
+    description: "Automated detection and notification system for the W&M course list. (Deprecated)",
+    github: "https://github.com/JawandS/WM_OCL_Reader",
+    live: null,
   },
 ];
 
 // Research data from resume
 const research = [
   {
-    title: "Economics Research",
-    institution: "William & Mary",
-    period: "2024–2026",
-    description: "Developed Python packages for experimental economics and macroeconomic modeling.",
-    packages: [
-      { name: "econ-llm", url: "https://pypi.org/project/econ-llm/" },
-      { name: "macroecon-tools", url: "https://pypi.org/project/macroecon-tools/" },
+    title: "Honor's Thesis",
+    institution: "William & Mary, Computer Science",
+    advisor: "Prof. Sidi Lu",
+    period: "June 2025 – Present",
+    description: "Investigating inflation forecasting using an ABM model. Using LLMs for software development and applications.",
+    links: [
+      { name: "macroeconvue", url: "https://github.com/JawandS/macroeconvue", type: "github" },
     ],
+  },
+  {
+    title: "Student Researcher",
+    institution: "William & Mary, Economics",
+    advisor: "Prof. Robert Hicks & Prof. Lisa Anderson",
+    period: "January 2025 – January 2026",
+    description: "Leveraging prompt engineering to research LLMs as agents in experimental economics and game theory. Created a web agent and platform to automate experiment execution and data collection.",
+    links: [
+      { name: "econ-llm", url: "https://pypi.org/project/econ-llm/", type: "package" },
+    ],
+  },
+  {
+    title: "Research Assistant",
+    institution: "William & Mary, Economics",
+    advisor: "Prof. Nathaniel Throckmorton",
+    period: "June 2024 – May 2025",
+    description: "Developing an open-source Python package that extends Pandas DataFrame and Series. Using generative AI to translate computational macroeconomics models from MATLAB to Python.",
+    links: [
+      { name: "macroecon-tools", url: "https://pypi.org/project/macroecon-tools/", type: "package" },
+    ],
+  },
+  {
+    title: "Undergraduate Research Assistant",
+    institution: "William & Mary, Secure Platforms Lab",
+    advisor: "Prof. Adwait Nadkarni",
+    period: "August 2023 – May 2024",
+    description: "Used web scraping and natural language processing to analyze the security/privacy of campaign sites. Drafted a journal extension and maintained a research repository.",
+    links: [],
+  },
+  {
+    title: "Research Intern",
+    institution: "George Mason University, Computer Science",
+    advisor: "Prof. Songqing Chen",
+    period: "May 2022 – June 2023",
+    description: "Measured, analyzed, and visualized eBPF tracing overhead on Ubuntu servers using bpftrace and Python. Visualized TensorFlow behavior using context switch tracing during program execution.",
+    links: [],
   },
 ];
 
@@ -196,16 +263,28 @@ function ProjectsSection({ onBack }: { onBack: () => void }) {
               <span className="text-sm text-purple-300">{project.year}</span>
             </div>
             <p className="mb-4 text-purple-100">{project.description}</p>
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-purple-300 transition-colors hover:text-purple-100"
-              >
-                View on GitHub →
-              </a>
-            )}
+            <div className="flex flex-wrap gap-4">
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-purple-300 transition-colors hover:text-purple-100"
+                >
+                  Live Site →
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-sm text-purple-300 transition-colors hover:text-purple-100"
+                >
+                  GitHub →
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -218,37 +297,40 @@ function ResearchSection({ onBack }: { onBack: () => void }) {
     <div className="relative z-30 flex min-h-full w-full flex-col items-center px-4 py-20 sm:px-8">
       <BackButton onBack={onBack} />
       <h1 className="mb-12 text-4xl font-bold text-white sm:text-5xl">Research</h1>
-      <div className="w-full max-w-3xl space-y-8">
+      <div className="w-full max-w-3xl space-y-6">
         {research.map((item, i) => (
           <div
             key={i}
-            className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm"
+            className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm transition-all hover:border-purple-400/50"
           >
             <div className="mb-2 flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
               <h3 className="text-xl font-bold text-white">{item.title}</h3>
               <span className="text-sm text-purple-300">{item.period}</span>
             </div>
-            <p className="mb-4 text-purple-200">{item.institution}</p>
-            <p className="mb-4 text-purple-100">{item.description}</p>
-            <div className="flex flex-wrap gap-3">
-              {item.packages.map((pkg, j) => (
-                <a
-                  key={j}
-                  href={pkg.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-lg border border-purple-400/50 bg-purple-800/30 px-3 py-1.5 text-sm text-purple-200 transition-all hover:border-purple-300 hover:bg-purple-700/40"
-                >
-                  📦 {pkg.name}
-                </a>
-              ))}
-            </div>
+            <p className="text-purple-200">{item.institution}</p>
+            <p className="mb-3 text-sm text-purple-300">Advisor: {item.advisor}</p>
+            <p className="text-purple-100">{item.description}</p>
+            {item.links.length > 0 && (
+              <div className="mt-4 flex flex-wrap gap-3">
+                {item.links.map((link, j) => (
+                  <a
+                    key={j}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg border border-purple-400/50 bg-purple-800/30 px-3 py-1.5 text-sm text-purple-200 transition-all hover:border-purple-300 hover:bg-purple-700/40"
+                  >
+                    {link.type === "package" ? "PyPI" : "GitHub"}: {link.name}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         ))}
         <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
           <h3 className="mb-4 text-xl font-bold text-white">Education</h3>
           <p className="text-lg text-purple-100">B.S. Computer Science & Economics</p>
-          <p className="text-purple-200">William & Mary • Aug 2023 – May 2026</p>
+          <p className="text-purple-200">William & Mary | Aug 2023 – May 2026</p>
           <p className="mt-2 text-purple-300">GPA: 3.98/4.00</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <span className="rounded bg-purple-800/40 px-2 py-1 text-xs text-purple-200">Bennett Fellow</span>
@@ -314,39 +396,53 @@ function ContactSection({ onBack }: { onBack: () => void }) {
 }
 
 function AboutSection({ onBack }: { onBack: () => void }) {
-  const skills = [
-    { category: "Languages", items: ["Python", "C/C++", "Bash", "JavaScript", "TypeScript", "Rust", "SQL", "Java"] },
-    { category: "Frameworks", items: ["Next.js", "React", "Flask", "FastAPI", "Tailwind CSS"] },
-    { category: "Tools", items: ["Git", "Linux", "Docker", "OpenAI API", "Claude Code", "LaTeX"] },
+  const languages = [
+    { level: "Proficient", items: ["Python", "C/C++", "Bash", "RegEx"] },
+    { level: "Familiar", items: ["Rust", "Java", "JavaScript", "HTML/CSS", "SQL"] },
+    { level: "Novice", items: ["R", "MATLAB", "Kotlin", "Svelte"] },
   ];
+
+  const tools = ["Linux", "Windows", "Git", "OpenAI API", "Claude Code", "Copilot", "eBPF", "LaTeX", "GIS", "VSCode", "PyCharm"];
+
+  const certificates = [
+    { name: "C++ Data Structures", year: "2024" },
+    { name: "Cyber Foundations", year: "2023" },
+    { name: "IBM AI Engineering", year: "2021" },
+  ];
+
+  const courses = {
+    cs: ["Edge Computing", "Software Dev", "Algorithms", "Data Structures", "Computer Organization", "AI"],
+    econ: ["Econometrics", "Game Theory", "Intermediate Macro/Micro"],
+    math: ["Linear Algebra", "Statistics", "Calculus", "Operations Research"],
+  };
 
   return (
     <div className="relative z-30 flex min-h-full w-full flex-col items-center px-4 py-20 sm:px-8">
       <BackButton onBack={onBack} />
       <h1 className="mb-8 text-4xl font-bold text-white sm:text-5xl">About Me</h1>
 
-      <div className="w-full max-w-3xl space-y-8">
+      <div className="w-full max-w-3xl space-y-6">
         <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
           <p className="text-lg leading-relaxed text-purple-100">
-            I&apos;m a software engineer with a passion for building end-to-end solutions,
-            particularly leveraging LLMs and modern web technologies. Currently pursuing
-            a B.S. in Computer Science & Economics at William & Mary with a 3.98 GPA.
+            Software engineer with a background in economics and DoD secret clearance.
+            Experienced in rapidly developing end-to-end software solutions leveraging
+            LLMs and creating LLM-powered applications.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-purple-100">
-            I thrive on rapidly developing full-stack applications and have experience
-            across the spectrum—from low-level C/C++ memory management to modern React
-            frontends and AI-powered backends.
+            Currently pursuing a B.S. in Computer Science & Economics at William & Mary
+            with a 3.98 GPA. I work across the full stack—from low-level C/C++ memory
+            management and signal processing to modern web frontends and AI-powered backends.
           </p>
         </div>
 
         <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
-          <h3 className="mb-4 text-xl font-bold text-white">Skills</h3>
+          <h3 className="mb-4 text-xl font-bold text-white">Languages</h3>
           <div className="space-y-4">
-            {skills.map((skill, i) => (
+            {languages.map((group, i) => (
               <div key={i}>
-                <p className="mb-2 text-sm font-medium text-purple-300">{skill.category}</p>
+                <p className="mb-2 text-sm font-medium text-purple-300">{group.level}</p>
                 <div className="flex flex-wrap gap-2">
-                  {skill.items.map((item, j) => (
+                  {group.items.map((item, j) => (
                     <span
                       key={j}
                       className="rounded-lg border border-purple-400/30 bg-purple-800/30 px-3 py-1 text-sm text-purple-100"
@@ -361,16 +457,80 @@ function AboutSection({ onBack }: { onBack: () => void }) {
         </div>
 
         <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
+          <h3 className="mb-4 text-xl font-bold text-white">Tools & Technologies</h3>
+          <div className="flex flex-wrap gap-2">
+            {tools.map((tool, i) => (
+              <span
+                key={i}
+                className="rounded-lg border border-purple-400/30 bg-purple-800/30 px-3 py-1 text-sm text-purple-100"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
+          <h3 className="mb-4 text-xl font-bold text-white">Certificates</h3>
+          <div className="flex flex-wrap gap-3">
+            {certificates.map((cert, i) => (
+              <span
+                key={i}
+                className="rounded-lg border border-purple-400/50 bg-purple-800/30 px-3 py-1.5 text-sm text-purple-100"
+              >
+                {cert.name} ({cert.year})
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
+          <h3 className="mb-4 text-xl font-bold text-white">Relevant Coursework</h3>
+          <div className="space-y-3">
+            <div>
+              <p className="mb-2 text-sm font-medium text-purple-300">Computer Science</p>
+              <div className="flex flex-wrap gap-2">
+                {courses.cs.map((course, i) => (
+                  <span key={i} className="rounded bg-purple-800/40 px-2 py-1 text-xs text-purple-200">{course}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-sm font-medium text-purple-300">Economics</p>
+              <div className="flex flex-wrap gap-2">
+                {courses.econ.map((course, i) => (
+                  <span key={i} className="rounded bg-purple-800/40 px-2 py-1 text-xs text-purple-200">{course}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="mb-2 text-sm font-medium text-purple-300">Mathematics</p>
+              <div className="flex flex-wrap gap-2">
+                {courses.math.map((course, i) => (
+                  <span key={i} className="rounded bg-purple-800/40 px-2 py-1 text-xs text-purple-200">{course}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-xl border border-purple-500/30 bg-purple-900/20 p-6 backdrop-blur-sm">
           <h3 className="mb-4 text-xl font-bold text-white">Quick Facts</h3>
           <ul className="space-y-2 text-purple-100">
             <li className="flex items-center gap-2">
               <span className="text-purple-400">▸</span> Based in Williamsburg, VA
             </li>
             <li className="flex items-center gap-2">
-              <span className="text-purple-400">▸</span> Secret Clearance holder
+              <span className="text-purple-400">▸</span> DoD Secret Clearance holder
             </li>
             <li className="flex items-center gap-2">
-              <span className="text-purple-400">▸</span> Bennett Fellow & Terry Glenn Scholar
+              <span className="text-purple-400">▸</span> Bennett Fellow & Terry Glenn Scholar (W&M Econ)
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-purple-400">▸</span> Cisco Student Success Award (W&M CS)
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-purple-400">▸</span> Applause & Spark Awards (MITRE)
             </li>
             <li className="flex items-center gap-2">
               <span className="text-purple-400">▸</span> Graduating May 2026
