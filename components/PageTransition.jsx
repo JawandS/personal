@@ -8,7 +8,7 @@ export default function PageTransition({
   children,
   activeSection,
   gridSize = 12,
-  pixelColor = '#A855F7',
+  pixelColor = '#60A5FA',
   animationDuration = 0.5,
 }) {
   const containerRef = useRef(null);

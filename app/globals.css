@@ -47,11 +47,11 @@
 }
 
 :root {
-  /* Purple palette */
-  --purple-deep: #1E1033;
-  --purple-royal: #6B21A8;
-  --purple-soft: #A855F7;
-  --purple-lavender: #E9D5FF;
+  /* Tech Blue palette */
+  --blue-deep: #0A1628;
+  --blue-electric: #3B82F6;
+  --blue-bright: #60A5FA;
+  --blue-sky: #DBEAFE;
   --slate-dark: #1E293B;
   --grey-light: #F1F5F9;
 

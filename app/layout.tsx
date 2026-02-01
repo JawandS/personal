@@ -29,9 +29,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        style={{ backgroundColor: "var(--purple-deep)" }}
+        style={{ backgroundColor: "var(--blue-deep)" }}
       >
-        <TransitionProvider gridSize={12} pixelColor="#1E1033" animationDuration={0.5}>
+        <TransitionProvider gridSize={12} pixelColor="#0A1628" animationDuration={0.5}>
           <GlobalBackground />
           <GlobalNav />
           {children}

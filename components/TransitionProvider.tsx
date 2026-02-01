@@ -29,7 +29,7 @@ interface TransitionProviderProps {
 export default function TransitionProvider({
   children,
   gridSize = 12,
-  pixelColor = "#1E1033",
+  pixelColor = "#0A1628",
   animationDuration = 0.5,
 }: TransitionProviderProps) {
   const router = useRouter();

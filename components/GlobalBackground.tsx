@@ -18,7 +18,7 @@ export default function GlobalBackground() {
         waveAmplitude={1}
         particleSize={2}
         lerpSpeed={0.1}
-        color={colors.purpleSoft}
+        color={colors.blueBright}
         autoAnimate={false}
         particleVariance={1}
         rotationSpeed={0}

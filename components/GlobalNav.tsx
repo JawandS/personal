@@ -25,9 +25,9 @@ export default function GlobalNav() {
   return (
     <PillNavNext
       items={navItems}
-      baseColor="#A855F7"
-      pillColor="#1E1033"
-      hoveredPillTextColor="#A855F7"
+      baseColor="#60A5FA"
+      pillColor="#0A1628"
+      hoveredPillTextColor="#60A5FA"
       pillTextColor="#fff"
     />
   );

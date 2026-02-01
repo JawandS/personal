@@ -6,10 +6,10 @@ Next.js personal website for Jawand Singh, deployed on Railway. Components from 
 
 | Color | Hex | RGB | Usage |
 |-------|-----|-----|-------|
-| Deep Purple | `#1E1033` | `30, 16, 51` | Dark backgrounds, headers |
-| Royal Purple | `#6B21A8` | `107, 33, 168` | Primary accent, links, buttons |
-| Soft Purple | `#A855F7` | `168, 85, 247` | Hover states, highlights |
-| Lavender | `#E9D5FF` | `233, 213, 255` | Light accents, borders |
+| Deep Blue | `#0A1628` | `10, 22, 40` | Dark backgrounds, headers |
+| Electric Blue | `#3B82F6` | `59, 130, 246` | Primary accent, links, buttons |
+| Bright Blue | `#60A5FA` | `96, 165, 250` | Hover states, highlights, particles |
+| Sky Blue | `#DBEAFE` | `219, 234, 254` | Light accents, borders |
 | Slate | `#1E293B` | `30, 41, 59` | Body text |
 | Light Grey | `#F1F5F9` | `241, 245, 249` | Background sections |
 | White | `#FFFFFF` | `255, 255, 255` | Main background |
@@ -18,10 +18,10 @@ Next.js personal website for Jawand Singh, deployed on Railway. Components from 
 
 ```css
 :root {
-  --primary: #6B21A8;
-  --primary-dark: #1E1033;
-  --primary-light: #A855F7;
-  --primary-muted: #E9D5FF;
+  --blue-deep: #0A1628;
+  --blue-electric: #3B82F6;
+  --blue-bright: #60A5FA;
+  --blue-sky: #DBEAFE;
   --text: #1E293B;
   --text-muted: #64748B;
   --background: #FFFFFF;

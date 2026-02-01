@@ -8,11 +8,11 @@ export default function ProjectsPage() {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="group rounded-xl border border-purple-400/40 bg-purple-950/80 p-6 backdrop-blur-md shadow-lg transition-all hover:border-purple-400/60"
+            className="group rounded-xl border border-blue-400/40 bg-slate-900/80 p-6 backdrop-blur-md shadow-lg transition-all hover:border-blue-400/60"
           >
             <div className="mb-2 flex items-center justify-between">
               <h3 className="text-xl font-bold text-white">{project.name}</h3>
-              <span className="text-sm text-purple-300">{project.year}</span>
+              <span className="text-sm text-blue-300">{project.year}</span>
             </div>
             <p className="mb-4 text-gray-100">{project.description}</p>
             <div className="flex flex-wrap gap-4">
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-purple-300 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-1 text-sm text-blue-300 transition-colors hover:text-white"
                 >
                   Live Site →
                 </a>
@@ -31,7 +31,7 @@ export default function ProjectsPage() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-purple-300 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-1 text-sm text-blue-300 transition-colors hover:text-white"
                 >
                   GitHub →
                 </a>

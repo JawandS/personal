@@ -191,8 +191,8 @@ export const aboutData = {
 
 // Colors for Three.js (needs hex values directly)
 export const colors = {
-  purpleDeep: "#1E1033",
-  purpleSoft: "#A855F7",
+  blueDeep: "#0A1628",
+  blueBright: "#60A5FA",
 };
 
 // Navigation items

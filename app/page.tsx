@@ -54,7 +54,7 @@ export default function Home() {
           background="transparent"
           borderRadius="8px"
           borderColor="transparent"
-          glareColor="#A855F7"
+          glareColor="#60A5FA"
           glareOpacity={0.5}
           glareAngle={-30}
           glareSize={300}
@@ -81,7 +81,7 @@ export default function Home() {
           background="transparent"
           borderRadius="8px"
           borderColor="transparent"
-          glareColor="#A855F7"
+          glareColor="#60A5FA"
           glareOpacity={0.4}
           glareAngle={-30}
           glareSize={300}
@@ -92,7 +92,7 @@ export default function Home() {
         >
           <p
             className="text-2xl tracking-wide md:text-3xl lg:text-4xl"
-            style={{ color: "var(--purple-lavender)" }}
+            style={{ color: "var(--blue-sky)" }}
           >
             <DecryptedText
               text="Software Engineer"
