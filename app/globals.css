@@ -47,6 +47,14 @@
 }
 
 :root {
+  /* Purple palette */
+  --purple-deep: #1E1033;
+  --purple-royal: #6B21A8;
+  --purple-soft: #A855F7;
+  --purple-lavender: #E9D5FF;
+  --slate-dark: #1E293B;
+  --grey-light: #F1F5F9;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
