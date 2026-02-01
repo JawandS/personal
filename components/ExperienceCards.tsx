@@ -30,7 +30,7 @@ export default function ExperienceCards() {
   );
   const [isAnimating, setIsAnimating] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const touchStartY = useRef(0);
+  const touchStartX = useRef(0);
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   const total = experiences.length;
@@ -77,9 +77,9 @@ export default function ExperienceCards() {
       return;
     }
 
-    // Animate front card dropping out
+    // Animate front card sliding out to the right
     gsap.to(el, {
-      y: 600,
+      x: 800,
       opacity: 0,
       scale: 0.8,
       duration: 0.5,
@@ -108,11 +108,11 @@ export default function ExperienceCards() {
       return;
     }
 
-    // Position at bottom, then animate up
-    gsap.set(el, { y: 600, opacity: 0, scale: 0.8, zIndex: total + 1 });
+    // Position at left, then animate in
+    gsap.set(el, { x: -800, opacity: 0, scale: 0.8, zIndex: total + 1 });
 
     gsap.to(el, {
-      y: 0,
+      x: 0,
       opacity: 1,
       scale: 1,
       duration: 0.6,
@@ -180,13 +180,13 @@ export default function ExperienceCards() {
     if (!container) return;
 
     const handleTouchStart = (e: TouchEvent) => {
-      touchStartY.current = e.touches[0].clientY;
+      touchStartX.current = e.touches[0].clientX;
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
-      const deltaY = touchStartY.current - e.changedTouches[0].clientY;
-      if (Math.abs(deltaY) > 50) {
-        if (deltaY > 0) {
+      const deltaX = touchStartX.current - e.changedTouches[0].clientX;
+      if (Math.abs(deltaX) > 50) {
+        if (deltaX > 0) {
           swapNext();
         } else {
           swapPrev();

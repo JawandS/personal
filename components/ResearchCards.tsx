@@ -88,7 +88,7 @@ export default function ResearchCards() {
     }
 
     gsap.to(el, {
-      y: 600,
+      x: 800,
       opacity: 0,
       scale: 0.8,
       duration: 0.5,
@@ -115,10 +115,10 @@ export default function ResearchCards() {
       return;
     }
 
-    gsap.set(el, { y: 600, opacity: 0, scale: 0.8, zIndex: total + 1 });
+    gsap.set(el, { x: -800, opacity: 0, scale: 0.8, zIndex: total + 1 });
 
     gsap.to(el, {
-      y: 0,
+      x: 0,
       opacity: 1,
       scale: 1,
       duration: 0.6,
