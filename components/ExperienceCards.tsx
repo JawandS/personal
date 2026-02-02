@@ -267,7 +267,19 @@ export default function ExperienceCards() {
               </span>
             </div>
             <p className="mb-4 text-lg text-blue-200">
-              {exp.company} • {exp.location}
+              {exp.companyUrl ? (
+                <a
+                  href={exp.companyUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="underline decoration-blue-400/50 underline-offset-2 transition-colors hover:text-white hover:decoration-blue-400"
+                >
+                  {exp.company}
+                </a>
+              ) : (
+                exp.company
+              )}{" "}
+              • {exp.location}
             </p>
             <ul className="space-y-2">
               {exp.items.map((item, j) => (

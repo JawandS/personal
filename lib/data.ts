@@ -3,6 +3,7 @@ export const experiences = [
   {
     title: "Founder & CEO",
     company: "MajorMatch",
+    companyUrl: "https://majormatch.me",
     period: "October 2025 – Present",
     location: "Remote",
     items: [
