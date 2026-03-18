@@ -156,7 +156,7 @@ export const research = [
 
 // Contact info
 export const contact = {
-  email: "JawandSingh@gmail.com",
+  email: "JawandSingh at gmail dot com",
   location: "Williamsburg, VA",
   linkedin: "https://linkedin.com/in/Jawand",
   github: "https://github.com/JawandS",
