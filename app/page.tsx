@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { navItems } from "@/lib/data";
 import { useTransition } from "@/components/TransitionProvider";
@@ -21,6 +21,14 @@ const CircularGallery = dynamic(
 export default function Home() {
   const { navigateWithTransition } = useTransition();
   const [triggerGlare, setTriggerGlare] = useState(false);
+
+  // Preload gallery images into browser cache immediately on mount
+  useEffect(() => {
+    navItems.forEach(({ image }) => {
+      const img = new Image();
+      img.src = image;
+    });
+  }, []);
   const [animationComplete, setAnimationComplete] = useState(false);
   const [showGallery, setShowGallery] = useState(false);
 

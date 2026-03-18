@@ -20,6 +20,15 @@ export const metadata: Metadata = {
   description: "Personal website of Jawand Singh - Software Engineer",
 };
 
+// Preload nav images so they're fetched immediately on page load
+const navImages = [
+  "/nature.webp",
+  "/majormatch.webp",
+  "/laptop.webp",
+  "/server.webp",
+  "/letters.webp",
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {navImages.map((src) => (
+          <link key={src} rel="preload" as="image" href={src} />
+        ))}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{ backgroundColor: "var(--blue-deep)" }}

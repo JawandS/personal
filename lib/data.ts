@@ -198,9 +198,9 @@ export const colors = {
 
 // Navigation items
 export const navItems = [
-  { image: "/nature.jpg", text: "About", id: "about" },
-  { image: "/majormatch.png", text: "Projects", id: "projects" },
-  { image: "/laptop.png", text: "Experience", id: "experience" },
-  { image: "/server.png", text: "Research", id: "research" },
-  { image: "/letters.png", text: "Contact", id: "contact" },
+  { image: "/nature.webp", text: "About", id: "about" },
+  { image: "/majormatch.webp", text: "Projects", id: "projects" },
+  { image: "/laptop.webp", text: "Experience", id: "experience" },
+  { image: "/server.webp", text: "Research", id: "research" },
+  { image: "/letters.webp", text: "Contact", id: "contact" },
 ];
